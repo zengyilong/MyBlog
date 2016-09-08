@@ -31,12 +31,17 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="MyBlog\main\views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyBlog\main\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MyBlog\model.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="MyBlog\__init__.py" />
-    <Compile Include="MyBlog\views.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MyBlog\" />
@@ -47,12 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FlaskAppTest.pubxml" />
-    <Content Include="MyBlog\templates\test.html" />
     <Content Include="requirements.txt" />
     <Content Include="MyBlog\templates\about.html" />
-    <Content Include="MyBlog\templates\contact.html" />
+    <Content Include="MyBlog\templates\home.html" />
     <Content Include="MyBlog\templates\index.html" />
-    <Content Include="MyBlog\templates\layout.html" />
+    <Content Include="MyBlog\templates\base.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="venv\">

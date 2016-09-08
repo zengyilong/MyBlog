@@ -1,41 +1,34 @@
-"""
-Routes and views for the flask application.
-"""
-
+# -*- coding:utf-8 -*-
 from datetime import datetime
 from flask import render_template
-from MyBlog import app
+from datetime import datetime
 
-@app.route('/')
-@app.route('/home')
-def home():
-    """Renders the home page."""
+from . import main
+
+@main.route('/')
+@main.route('/index')
+def index():   
     return render_template(
         'index.html',
         title='Home Page',
         year=datetime.now().year,
+        current_time=datetime.utcnow()
     )
 
-@app.route('/contact')
-def contact():
-    """Renders the contact page."""
+@main.route('/home')
+def home():
     return render_template(
-        'contact.html',
+        'home.html',
         title='Contact',
         year=datetime.now().year,
         message='Your contact page.'
     )
 
-@app.route('/about')
+@main.route('/about')
 def about():
-    """Renders the about page."""
     return render_template(
         'about.html',
         title='About',
         year=datetime.now().year,
         message='Your application description page.'
     )
-
-@app.route('/test')
-def test():
-    return render_template('test.html')
