@@ -31,13 +31,26 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="config.py" />
+    <Compile Include="MyBlog\email.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyBlog\main\errors.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyBlog\main\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MyBlog\main\views.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="MyBlog\main\__init__.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MyBlog\model.py">
+    <Compile Include="manage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyBlog\models.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="runserver.py" />
@@ -52,9 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FlaskAppTest.pubxml" />
+    <Content Include="MyBlog\templates\404.html" />
+    <Content Include="MyBlog\templates\500.html" />
     <Content Include="requirements.txt" />
-    <Content Include="MyBlog\templates\about.html" />
-    <Content Include="MyBlog\templates\home.html" />
     <Content Include="MyBlog\templates\index.html" />
     <Content Include="MyBlog\templates\base.html" />
   </ItemGroup>
