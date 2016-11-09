@@ -32,9 +32,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="config.py" />
+    <Compile Include="MyBlog\decorators.py" />
     <Compile Include="MyBlog\email.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MyBlog\auth\forms.py" />
+    <Compile Include="MyBlog\auth\views.py" />
+    <Compile Include="MyBlog\auth\__init__.py" />
     <Compile Include="MyBlog\main\errors.py">
       <SubType>Code</SubType>
     </Compile>
@@ -55,21 +59,58 @@
     </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="MyBlog\__init__.py" />
+    <Compile Include="tests\test_basics.py" />
+    <Compile Include="tests\test_user_model.py" />
+    <Compile Include="tests\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MyBlog\" />
     <Folder Include="MyBlog\main\" />
+    <Folder Include="MyBlog\auth\" />
     <Folder Include="MyBlog\static\" />
     <Folder Include="MyBlog\templates\" />
+    <Folder Include="MyBlog\templates\auth\" />
+    <Folder Include="MyBlog\templates\auth\email\" />
+    <Folder Include="MyBlog\templates\mail\" />
+    <Folder Include="requirements\" />
     <Folder Include="tests\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MyBlog\static\favicon.ico" />
+    <Content Include="requirements.txt" />
+    <Content Include="requirements\common.txt" />
+    <Content Include="requirements\dev.txt" />
+    <Content Include="requirements\prod.txt" />
     <None Include="FlaskAppTest.pubxml" />
+    <Content Include="MyBlog\static\styles.css" />
+    <Content Include="MyBlog\templates\403.html" />
     <Content Include="MyBlog\templates\404.html" />
     <Content Include="MyBlog\templates\500.html" />
-    <Content Include="requirements.txt" />
-    <Content Include="MyBlog\templates\index.html" />
+    <Content Include="MyBlog\templates\auth\change_email.html" />
+    <Content Include="MyBlog\templates\auth\change_password.html" />
+    <Content Include="MyBlog\templates\auth\email\change_email.html" />
+    <Content Include="MyBlog\templates\auth\email\change_email.txt" />
+    <Content Include="MyBlog\templates\auth\email\confirm.html" />
+    <Content Include="MyBlog\templates\auth\email\confirm.txt" />
+    <Content Include="MyBlog\templates\auth\email\reset_password.html" />
+    <Content Include="MyBlog\templates\auth\email\reset_password.txt" />
+    <Content Include="MyBlog\templates\auth\login.html" />
+    <Content Include="MyBlog\templates\auth\register.html" />
+    <Content Include="MyBlog\templates\auth\reset_password.html" />
+    <Content Include="MyBlog\templates\auth\unconfirmed.html" />
     <Content Include="MyBlog\templates\base.html" />
+    <Content Include="MyBlog\templates\edit_post.html" />
+    <Content Include="MyBlog\templates\edit_profile.html" />
+    <Content Include="MyBlog\templates\followers.html" />
+    <Content Include="MyBlog\templates\index.html" />
+    <Content Include="MyBlog\templates\mail\new_user.html" />
+    <Content Include="MyBlog\templates\mail\new_user.txt" />
+    <Content Include="MyBlog\templates\moderate.html" />
+    <Content Include="MyBlog\templates\post.html" />
+    <Content Include="MyBlog\templates\user.html" />
+    <Content Include="MyBlog\templates\_comments.html" />
+    <Content Include="MyBlog\templates\_macros.html" />
+    <Content Include="MyBlog\templates\_posts.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="venv\">

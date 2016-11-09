@@ -1,0 +1,16 @@
+clean
+test_invalid_filter_attr
+test_unquoted_attr
+test_unclosed_tag
+test_invalid_attr_value
+eq_
+test_feed_protocol
+test_invalid_tag_char
+test_poster_attribute
+test_invalid_href_attr
+test_unquoted_event_handler
+test_invalid_attr
+test_nasty
+test_nested_script_tag_r
+test_strip
+test_nested_script_tag
